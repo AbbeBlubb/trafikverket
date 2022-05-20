@@ -23,7 +23,7 @@ const getData = async () => {
 
       // TODO: Ändra body efter dina inställningar och personnr.
       //	Gör en sökning på transportstyrelsens hemsida. Kolla network och kopiera info från anropet.
-      "body": "{\"bookingSession\":{\"socialSecurityNumber\":\"198907211315\",\"licenceId\":5,\"bookingModeId\":0,\"ignoreDebt\":false,\"ignoreBookingHindrance\":false,\"examinationTypeId\":0,\"excludeExaminationCategories\":[],\"rescheduleTypeId\":0,\"paymentIsActive\":false,\"paymentReference\":null,\"paymentUrl\":null},\"occasionBundleQuery\":{\"startDate\":\"2021-01-11T23:00:00.000Z\",\"locationId\":1000134,\"nearbyLocationIds\":[1000326,1000132],\"vehicleTypeId\":4,\"tachographTypeId\":1,\"occasionChoiceId\":1,\"examinationTypeId\":12}}",
+      "body": "{\"bookingSession\":{\"socialSecurityNumber\":\"19XXXXXXXXXX\",\"licenceId\":5,\"bookingModeId\":0,\"ignoreDebt\":false,\"ignoreBookingHindrance\":false,\"examinationTypeId\":0,\"excludeExaminationCategories\":[],\"rescheduleTypeId\":0,\"paymentIsActive\":false,\"paymentReference\":null,\"paymentUrl\":null},\"occasionBundleQuery\":{\"startDate\":\"2021-01-11T23:00:00.000Z\",\"locationId\":1000134,\"nearbyLocationIds\":[1000326,1000132],\"vehicleTypeId\":4,\"tachographTypeId\":1,\"occasionChoiceId\":1,\"examinationTypeId\":12}}",
       "method": "POST",
       "mode": "cors"
     });
