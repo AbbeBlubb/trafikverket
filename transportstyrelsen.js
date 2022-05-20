@@ -23,7 +23,7 @@ const getData = async () => {
 
       // TODO: Ändra body efter dina inställningar och personnr.
       //	Gör en sökning på transportstyrelsens hemsida. Kolla network och kopiera info från anropet.
-      "body": "{\"bookingSession\":{\"socialSecurityNumber\":\"19XXXXXXXXXX\",\"licenceId\":5,\"bookingModeId\":0,\"ignoreDebt\":false,\"ignoreBookingHindrance\":false,\"examinationTypeId\":0,\"excludeExaminationCategories\":[],\"rescheduleTypeId\":0,\"paymentIsActive\":false,\"paymentReference\":null,\"paymentUrl\":null},\"occasionBundleQuery\":{\"startDate\":\"2021-01-11T23:00:00.000Z\",\"locationId\":1000134,\"nearbyLocationIds\":[1000326,1000132],\"vehicleTypeId\":4,\"tachographTypeId\":1,\"occasionChoiceId\":1,\"examinationTypeId\":12}}",
+      "body": "{\"bookingSession\":{\"socialSecurityNumber\":\"19XXXXXXXXXX\",\"licenceId\":5,\"bookingModeId\":0,\"ignoreDebt\":false,\"ignoreBookingHindrance\":false,\"examinationTypeId\":0,\"excludeExaminationCategories\":[],\"rescheduleTypeId\":0,\"paymentIsActive\":false,\"paymentReference\":null,\"paymentUrl\":null},\"occasionBundleQuery\":{\"startDate\":\"2022-06-01T23:00:00.000Z\",\"locationId\":1000134,\"nearbyLocationIds\":[1000326,1000132],\"vehicleTypeId\":4,\"tachographTypeId\":1,\"occasionChoiceId\":1,\"examinationTypeId\":12}}",
       "method": "POST",
       "mode": "cors"
     });
@@ -31,8 +31,8 @@ const getData = async () => {
     const json = await response.json();
 
     // TODO: Ändra start & slut datum den ska notifiera för.
-    const wantedAfterDate = new Date("2021-02-20");
-    const wantedBeforeDate = new Date("2021-02-27");
+    const wantedAfterDate = new Date("2022-06-01");
+    const wantedBeforeDate = new Date("2022-07-15");
 
     const firstDate = json.data[0].occasions[0].date;
 
@@ -47,11 +47,10 @@ const getData = async () => {
       console.log("found: ", foundDate);
 
       // TODO: Lägg in dina pushover.net tokens här.
-      var p = new Push({
-        user: "ucg6vnsaztqq5wxne2mm6dqmqq5ud6",
-        token: "amnc77ut3nkahqeto83ztewne7d678",
+      var push = new Push({
+        user: "x",
+        token: "x",
       })
-
 
       var msg = {
         // These values correspond to the parameters detailed on https://pushover.net/api
@@ -59,7 +58,7 @@ const getData = async () => {
         device: 'iphone',
       }
 
-      p.send(msg, function (err, result) {
+      push.send(msg, function (err, result) {
         if (err) {
           throw err
         }
@@ -70,7 +69,6 @@ const getData = async () => {
     } else {
       console.log("not found: ", firstDate);
     }
-
 
   } catch (error) {
     console.log(error);
