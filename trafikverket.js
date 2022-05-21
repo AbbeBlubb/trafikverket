@@ -50,7 +50,7 @@ const getData = async () => {
     if (foundLessonObject) {
       //console.log("The found lesson object: ", foundLessonObject)
       const foundDate = foundLessonObject.occasions[0].date;
-      console.log("Slot found. Date", foundDate);
+      console.log("Exam slot found. Date", foundDate);
 
       var push = new Push({
         user: secrets.pushOverUserKey,
@@ -72,7 +72,7 @@ const getData = async () => {
 
     } else {
       // If no slot found
-      console.log("Slot not found. First available date is", firstDate);
+      console.log("Exam slot not found. First available date is", firstDate);
     }
 
   } catch (error) {
@@ -80,4 +80,5 @@ const getData = async () => {
   }
 };
 
+// watch -n 10 node trafikverket.js
 getData();
