@@ -72,7 +72,7 @@ const getData = async () => {
 
     } else {
       // If no slot found
-      console.log("Exam slot not found. First available date is", firstDate);
+      console.log("Exam slot not found. First available date is", firstDate, "\nTimestamp: ", new Date().toISOString() );
     }
 
   } catch (error) {
