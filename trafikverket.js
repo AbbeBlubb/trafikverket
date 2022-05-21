@@ -46,7 +46,7 @@ const getData = async () => {
       const foundDate = new Date(item.occasions[0].date);
       return foundDate > wantedAfterDate && foundDate < wantedBeforeDate;
     });
-    
+
     if (foundLessonObject) {
       //console.log("The found lesson object: ", foundLessonObject)
       const foundDate = foundLessonObject.occasions[0].date;
@@ -57,26 +57,26 @@ const getData = async () => {
         token: secrets.pushOverApplicationToken,
       })
 
-      var msg = {
+      var message = {
         // These values correspond to the parameters detailed on https://pushover.net/api
-        message: `${foundDate}`,	// required
-        device: 'iphone',
+        message: `Exam slot found at ${foundDate}!`,	// required
       }
 
-      push.send(msg, function (err, result) {
+      push.send(message, function (err, result) {
         if (err) {
           throw err
         }
 
-        console.log(result)
+        console.log("The result of the Pushover notification: ", result)
       });
 
     } else {
+      // If no slot found
       console.log("Slot not found. First available date is", firstDate);
     }
 
   } catch (error) {
-    console.log(error);
+    console.log("Error thrown: ", error);
   }
 };
 
