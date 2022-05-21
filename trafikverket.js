@@ -37,24 +37,24 @@ const getData = async () => {
     const response = await fetch("https://fp.trafikverket.se/Boka/occasion-bundles", request);
     const responseObject = await response.json();
     const wantedAfterDate = new Date("2022-06-01");
-    const wantedBeforeDate = new Date("2022-07-15");
+    const wantedBeforeDate = new Date("2022-10-15");
     // If contract changes, uncomment the response log below and run this script with 'node trafikverket.js > output.txt' so you can look at the data structure
     // console.log("Res: ", JSON.stringify(responseObject.data.bundles[0], null, 4));
     const firstDate = responseObject.data.bundles[0].occasions[0].date;
 
-    const foundLesson = responseObject.data.bundles.find(item => {
+    const foundLessonObject = responseObject.data.bundles.find(item => {
       const foundDate = new Date(item.occasions[0].date);
       return foundDate > wantedAfterDate && foundDate < wantedBeforeDate;
     });
-
-    if (foundLesson) {
-      const foundDate = foundLesson.occasions[0].date;
-
-      console.log("found: ", foundDate);
+    
+    if (foundLessonObject) {
+      //console.log("The found lesson object: ", foundLessonObject)
+      const foundDate = foundLessonObject.occasions[0].date;
+      console.log("Slot found. Date", foundDate);
 
       var push = new Push({
-        user: secrets.pushOverUser,
-        token: secrets.pushOverUser,
+        user: secrets.pushOverUserKey,
+        token: secrets.pushOverApplicationToken,
       })
 
       var msg = {
@@ -72,7 +72,7 @@ const getData = async () => {
       });
 
     } else {
-      console.log("Slot not found. First date is", firstDate);
+      console.log("Slot not found. First available date is", firstDate);
     }
 
   } catch (error) {
