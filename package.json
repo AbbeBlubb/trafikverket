@@ -1,8 +1,8 @@
 {
-  "name": "transportstyrelsen",
+  "name": "trafikverket",
   "version": "1.0.0",
-  "description": "",
-  "main": "transportstyrelsen.js",
+  "description": "Find slot for driving exam",
+  "main": "trafikverket.js",
   "dependencies": {
     "node-fetch": "^2.6.0",
     "pushover-notifications": "^1.2.2"
