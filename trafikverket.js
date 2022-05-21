@@ -34,18 +34,15 @@ const request = {
 
 const getData = async () => {
   try {
-    console.log("req: ", request)
     const response = await fetch("https://fp.trafikverket.se/Boka/occasion-bundles", request);
     const responseObject = await response.json();
-    console.log("Res: ", responseObject);
-
-    // TODO: Ändra start & slut datum den ska notifiera för.
     const wantedAfterDate = new Date("2022-06-01");
     const wantedBeforeDate = new Date("2022-07-15");
+    // If contract changes, uncomment the response log below and run this script with 'node trafikverket.js > output.txt' so you can look at the data structure
+    // console.log("Res: ", JSON.stringify(responseObject.data.bundles[0], null, 4));
+    const firstDate = responseObject.data.bundles[0].occasions[0].date;
 
-    const firstDate = responseObject.data[0].occasions[0].date;
-
-    const foundLesson = responseObject.data.find(item => {
+    const foundLesson = responseObject.data.bundles.find(item => {
       const foundDate = new Date(item.occasions[0].date);
       return foundDate > wantedAfterDate && foundDate < wantedBeforeDate;
     });
@@ -55,7 +52,6 @@ const getData = async () => {
 
       console.log("found: ", foundDate);
 
-      // TODO: Lägg in dina pushover.net tokens här.
       var push = new Push({
         user: secrets.pushOverUser,
         token: secrets.pushOverUser,
@@ -76,7 +72,7 @@ const getData = async () => {
       });
 
     } else {
-      console.log("not found: ", firstDate);
+      console.log("Slot not found. First date is", firstDate);
     }
 
   } catch (error) {

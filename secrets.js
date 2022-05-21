@@ -2,11 +2,11 @@
 
 module.exports = {
     // https://pushover.net/
-    pushOverUser: "x",
-    pushOverToken: "x",
+    pushOverUser: "u67da9w3n197yve12tmqpy5ihfedci",
+    pushOverToken: "a17uozofmijr441jwha9kqyrbgd97a",
     // network --> occasion bundles --> header --> paste string
-    requestHeaderCookiesFromMadeSearach: "xxx",
+    headerCookiesFromMadeSearach: "ASP.NET_SessionId=d21ig22debuuoiozzuy2drst; forarprov-ext=ffffffff0914194145525d5f4f58455e445a4a423660; _pk_ref..825a=%5B%22%22%2C%22%22%2C1653144776%2C%22https%3A%2F%2Fwww.trafikverket.se%2F%22%5D; _pk_ses..825a=1; _pk_ref.4.825a=%5B%22%22%2C%22%22%2C1653144776%2C%22https%3A%2F%2Fwww.trafikverket.se%2F%22%5D; _pk_id.4.825a=ee28844c93fd76b6.1653144776.; _pk_ses.4.825a=1; LoginValid=2022-05-21 17:29; FpsExternalIdentity=3D46C8F70C88DBFF61CFBCA2FA13DF1C4BEDE0A60E315AF699F51C2174959F0390790BC9B6725731E5707C0DAFAB83597FBCABD6E7AE5BB71F6DBB6B97E87AC4953C4D270AAD47E913AB4487FDE00CEFA3871EC158A6DBAD576420527CF0FBF83605C262A6D469408CC7CDF4D0660A9193DF30C65A3DB79C2D4D3272EB9CF1FBCEA5EA5823F8BF99FA61190C70D252AC06A08F5DF6974650304F7407C3AEE307E9A4FAE7E91CEF15B3C847E00803E394B6A66D6FFC76BC371EB1FFE52651675F6C7F1A68EBD55E7EEA8E18F6714D3221376D1627552FA4F12DDC574AD32EA97A61FCC4E0CD0C1A1A5F7FB041A600A01389B4049E6027436C07FCB74E75FBD9181F35B61763986B09A8106893B85FDAAD94FE187AF0DBC208210FC546DC4CA4C542A25FB8E2CC46993BEE74182DCA99CF9B7E407353FFD33141F070B00653513709653FCCC4D8A9820C09CA74AC0EBBA2AFF5ACE096EA1C8B4569A43827D7796F8A318E183BDFD61873E6AD3C55EB19F6B65876A11F0F3D8147E8BE6E142F8C615CF29DE20ECFFB39E0017CCD74306D91DE8CA097B2630C23937E08AAFB577EDB1138E6EAB49D9B31339EFC84162BCAACA2494E2D26DC46CD42A084B421E254FEE605BBAF97797DF171E0B9A249BCB7D9",
     // network --> occasion bundles --> payload --> paste object
-    requestBodyFromMadeSearch: {"bookingSession":{"socialSecurityNumber":"xxxxxxxx-xxxx","licenceId":5,"bookingModeId":0,"ignoreDebt":false,"ignoreBookingHindrance":false,"examinationTypeId":0,"excludeExaminationCategories":[],"rescheduleTypeId":0,"paymentIsActive":false,"paymentReference":null,"paymentUrl":null,"searchedMonths":0},"occasionBundleQuery":{"startDate":"1970-01-01T00:00:00.000Z","searchedMonths":0,"locationId":1000019,"nearbyLocationIds":[],"vehicleTypeId":2,"tachographTypeId":1,"occasionChoiceId":1,"examinationTypeId":12}
+    requestBodyFromMadeSearch: {"bookingSession":{"socialSecurityNumber":"19830923-0491","licenceId":5,"bookingModeId":0,"ignoreDebt":false,"ignoreBookingHindrance":false,"examinationTypeId":0,"excludeExaminationCategories":[],"rescheduleTypeId":0,"paymentIsActive":false,"paymentReference":null,"paymentUrl":null,"searchedMonths":0},"occasionBundleQuery":{"startDate":"1970-01-01T00:00:00.000Z","searchedMonths":0,"locationId":1000019,"nearbyLocationIds":[],"vehicleTypeId":2,"tachographTypeId":1,"occasionChoiceId":1,"examinationTypeId":12}
     },
 }
