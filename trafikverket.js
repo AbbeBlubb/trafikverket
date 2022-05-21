@@ -50,7 +50,7 @@ const getData = async () => {
     if (foundLessonObject) {
       //console.log("The found lesson object: ", foundLessonObject)
       const foundDate = foundLessonObject.occasions[0].date;
-      console.log("Exam slot found. Date", foundDate);
+      console.log("Exam slot found. Date", foundDate, "\nTimestamp: ", new Date().toISOString() );
 
       var push = new Push({
         user: secrets.pushOverUserKey,
