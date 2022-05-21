@@ -2,8 +2,7 @@ const fetch = require("node-fetch");
 const Push = require("pushover-notifications");
 const secrets = require("./secrets");
 
-// TODO: Ändra body efter dina inställningar och personnr.
-//	Gör en sökning på transportstyrelsens hemsida. Kolla network och kopiera info från anropet. Escapa nödvändiga citattecken
+
 const request = {
   "Referrer Policy": "strict-origin-when-cross-origin",
   "method": "POST", // Has to be POST, else no body can be attached
