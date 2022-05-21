@@ -36,8 +36,8 @@ const getData = async () => {
   try {
     const response = await fetch("https://fp.trafikverket.se/Boka/occasion-bundles", request);
     const responseObject = await response.json();
-    const wantedAfterDate = new Date("2022-06-01");
-    const wantedBeforeDate = new Date("2022-10-15");
+    const wantedAfterDate = new Date(secrets.findSlotAfterDate);
+    const wantedBeforeDate = new Date(secrets.findSlotBeforeDate);
     // If contract changes, uncomment the response log below and run this script with 'node trafikverket.js > output.txt' so you can look at the data structure
     // console.log("Res: ", JSON.stringify(responseObject.data.bundles[0], null, 4));
     const firstDate = responseObject.data.bundles[0].occasions[0].date;

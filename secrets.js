@@ -1,6 +1,8 @@
 // Do not commit this file
 
 module.exports = {
+    findSlotAfterDate: "2022-06-01",
+    findSlotBeforeDate: "2022-10-15",
     // https://pushover.net/
     pushOverUserKey: "x",
     pushOverApplicationToken: "x",
