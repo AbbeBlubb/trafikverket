@@ -14,4 +14,4 @@ Run once
 > node trafikverket.js
 
 Run with interval in Bash console
-> watch -n 10 node trafikverket.js
+> watch -n 30 node trafikverket.js

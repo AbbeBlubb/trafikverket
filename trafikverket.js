@@ -80,5 +80,5 @@ const getData = async () => {
   }
 };
 
-// watch -n 10 node trafikverket.js
+// watch -n 30 node trafikverket.js
 getData();
