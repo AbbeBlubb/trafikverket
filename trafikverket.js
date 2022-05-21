@@ -15,7 +15,7 @@ const request = {
     "connection": "keep-alive",
     "Content-Length": "512",
     "content-type": "application/json",
-    "cookie": secrets.headerCookiesFromMadeSearach,
+    "cookie": secrets.requestHeaderCookiesFromMadeSearach,
     "DNT": "1",
     "Host": "fp.trafikverket.se",
     "Origin": "https://fp.trafikverket.se",
