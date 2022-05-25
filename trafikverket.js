@@ -58,7 +58,7 @@ const getData = async () => {
 
       var message = {
         // These values correspond to the parameters detailed on https://pushover.net/api
-        message: `Exam slot found at ${foundDate}!`,	// required
+        message: `Exam slot FOUND at ${foundDate}!`,	// required
       }
 
       push.send(message, function (err, result) {
@@ -70,8 +70,8 @@ const getData = async () => {
       });
 
     } else {
-      // If no slot found
-      console.log("Exam slot not found. First available date is", firstDate, "\nTimestamp: ", new Date().toISOString() );
+      // If no slot was found
+      console.log("Exam slot NOT found. \nFirst available date is", firstDate, "\nTimestamp:", new Date().toISOString());
     }
 
   } catch (error) {
