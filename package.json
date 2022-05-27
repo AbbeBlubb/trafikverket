@@ -5,9 +5,9 @@
   "main": "trafikverket.js",
   "dependencies": {
     "node-fetch": "^2.6.0",
-    "pushover-notifications": "^1.2.2"
+    "pushover-notifications": "^1.2.2",
+    "shelljs": "^0.8.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

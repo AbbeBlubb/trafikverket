@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const Push = require("pushover-notifications");
 const secrets = require("./secrets");
+var shell = require('shelljs');
 
 
 const request = {
@@ -50,6 +51,8 @@ const getData = async () => {
       //console.log("The found lesson object: ", foundLessonObject)
       const foundDate = foundLessonObject.occasions[0].date;
       console.log("Exam slot found. Date", foundDate, "\nTimestamp: ", new Date().toISOString() );
+
+      shell.exec("vlc alert.mp3")
 
       var push = new Push({
         user: secrets.pushOverUserKey,
